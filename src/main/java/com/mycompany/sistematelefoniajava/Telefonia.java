@@ -126,6 +126,34 @@ public class Telefonia {
 		}
 	}
 
+	public void imprimirFaturas(int mes) {
+		DecimalFormat formatador = new DecimalFormat("0.00");
+		for (int i = 0; i < numPrePagos; i++) {
+			if (this.prePagos[i].numChamadas > 0) {
+			this.prePagos[i].imprimirFatura(mes);
+			} else {
+				System.out.println("Fatura assinante pré pago:");
+				System.out.println(this.prePagos[i]);
+				System.out.println("O assinante não efetuou ligações nesse mês.");
+				System.out.println("Créditos: R$" + formatador.format(this.prePagos[i].creditos));
+			}
+			System.out.println();
+		}
+		for (int i = 0; i < numPosPagos; i++) {
+			if(this.posPagos[i].numChamadas > 0) {
+			this.posPagos[i].imprimirFatura(mes);
+			}
+			else {
+				System.out.println("Fatura assinante pós pago:");
+				System.out.println(this.posPagos[i]);
+				System.out.println("O assinante não efetuou ligações nesse mês.");
+				System.out.println("Assinatura: R$" + formatador.format(this.posPagos[i].assinatura));
+				System.out.println("Valor da fatura: R$" + formatador.format(this.posPagos[i].assinatura));
+			}
+			System.out.println();
+		}
+	}
+	
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }

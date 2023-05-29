@@ -50,6 +50,23 @@ public class Telefonia {
 			}
 		}
 	}
+	
+	public void listarAssinantes() {
+		System.out.println("Assinantes pré pagos: ");
+		for (int i = 0; i < numPrePagos; i++) {
+			if (this.prePagos[i] != null){
+			System.out.println(this.prePagos[i].toString());
+			}
+		}
+		System.out.println();
+		System.out.println("Assinantes pós pagos: ");
+		for (int i = 0; i < numPosPagos; i++) {
+			if(this.posPagos[i] != null) {
+			System.out.println(this.posPagos[i].toString());
+			}
+		}
+		System.out.println();
+	}
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }

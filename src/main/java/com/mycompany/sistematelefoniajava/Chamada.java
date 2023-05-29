@@ -1,4 +1,4 @@
-package com.DSI1.Telefonia;
+package com.mycompany.sistematelefoniajava;
 
 import java.util.Objects;
 import java.util.Date;

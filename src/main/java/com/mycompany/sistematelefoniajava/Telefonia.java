@@ -99,3 +99,34 @@ public class Telefonia {
         System.out.println("Hello World!");
     }
 }
+
+	public void fazerChamada(int opcao, long cpf, Date data, int duracao) {
+		if (opcao == 1) { 
+			if (this.localizarPosPago(cpf) != null) {
+				PosPago cham = this.localizarPosPago(cpf);
+				cham.fazerChamada(data, duracao);
+				System.out.println("A chamada foi realizada.");
+			} else {
+				System.out.println("O assinante não foi encontrado no sistema.");
+			}
+		} else if (opcao == 2) {
+			if (this.localizarPrePago(cpf) != null) {
+				PrePago cham = this.localizarPrePago(cpf);
+				cham.fazerChamada(data, duracao);
+			} else {
+				System.out.println("O assinante não foi encontrado no sistema.");
+			}
+		} else {
+			System.out.println("Escolha outra opção.");
+		}
+	}
+
+	public void fazerRecarga(long cpf, float valor, Date data) {
+		if (this.localizarPrePago(cpf) != null) {
+			PrePago rec = this.localizarPrePago(cpf);
+			rec.recarregar(data, valor);
+			System.out.println("Recarga realizada."); 
+		} else {
+			System.out.println("O assinante não foi encontrado no sistema."); 
+		}
+	}

@@ -95,11 +95,6 @@ public class Telefonia {
 		return null;
 	}
 	
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-}
-
 	public void fazerChamada(int opcao, long cpf, Date data, int duracao) {
 		if (opcao == 1) { 
 			if (this.localizarPosPago(cpf) != null) {
@@ -130,3 +125,8 @@ public class Telefonia {
 			System.out.println("O assinante não foi encontrado no sistema."); 
 		}
 	}
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}

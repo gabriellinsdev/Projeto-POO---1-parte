@@ -67,6 +67,34 @@ public class Telefonia {
 		}
 		System.out.println();
 	}
+	
+	public PrePago localizarPrePago(long cpf) {
+		for (int i = 0; i <= numPrePagos; i++) {
+			if (this.prePagos[i] != null) {
+				if (this.prePagos[i].getCpf() == cpf) {
+					return this.prePagos[i];
+			}
+			} else {
+				i++;
+			}
+		}
+		return null;
+	}
+
+	public PosPago localizarPosPago(long cpf) {
+		for (int i = 0; i <= numPosPagos; i++) {
+			if (this.posPagos[i] != null) {
+			if (this.posPagos[i].getCpf() == cpf) {
+				return this.posPagos[i];
+			} 
+			}
+			else {
+				i++;
+			}
+		}
+		return null;
+	}
+	
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }

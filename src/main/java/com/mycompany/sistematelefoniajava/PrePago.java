@@ -4,10 +4,13 @@
  */
 package com.mycompany.sistematelefoniajava;
 
+import java.text.DecimalFormat;
+import java.util.Date;
+
 /**
  *
  * @author gabri
  */
-public class PrePago {
+public class PrePago extends Assinante {
     
 }

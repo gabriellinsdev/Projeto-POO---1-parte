@@ -4,10 +4,13 @@
  */
 package com.mycompany.sistematelefoniajava;
 
+
+import java.util.Date;
+import java.text.DecimalFormat;
 /**
  *
  * @author gabri
  */
-public class PosPago {
+public class PosPago extends Assinante{
     
 }

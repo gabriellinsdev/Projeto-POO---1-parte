@@ -13,10 +13,11 @@ public class PosPago extends Assinante{
 	
 	public void fazerChamada(Date data, int duracao) { 
 		numChamadas++;
-		
 		for(int i = 0; i < numChamadas; i++) {
+			if(this.chamadas[i] == null) {
 				Chamada chamada = new Chamada(data, duracao);
 				this.chamadas[i] = chamada;
+			}
 		}
 	}
 	

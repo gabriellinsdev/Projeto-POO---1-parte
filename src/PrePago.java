@@ -26,8 +26,6 @@ public class PrePago extends Assinante{
 			else if (this.chamadas[i] == null && this.creditos < semCredito){
 				this.numChamadas--;
 				System.out.println("Você não possui créditos para realizar essa chamada, realize uma recarga.");
-			} else {
-				
 			}
 		}
 	}
